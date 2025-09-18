@@ -1,0 +1,112 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* --- Encabezado --- */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518638150340-f706e86a5ba6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* --- Contenido Principal --- */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.destino {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.destino:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.destino-texto {
+    flex: 1;
+}
+
+.destino-imagen {
+    flex: 1;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    border-radius: 8px;
+}
+
+.destino img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.destino img:hover {
+    transform: scale(1.05);
+}
+
+.destino h2 {
+    color: #d32f2f; /* Un rojo inspirado en la cultura mexicana */
+    border-bottom: 2px solid #ef5350;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 2rem 0;
+}
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #f4f4f4;
+    margin-top: 2rem;
+}
+
+/* --- Responsividad para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .destino, .destino:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
